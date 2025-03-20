@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rapidapi</title>
+    <style>
+        .continer {
+            border: 2px solid rgb(170, 36, 36);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            padding: 10px;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .item {
+            border: 2px solid rgb(230, 233, 230);
+            padding: 10px;
+            background-color: seashell;
+            border-radius: 10px;
+
+        }
+
+        .title>b {
+            color: orange;
+            text-align: center;
+        }
+
+        .image {
+            border: red;
+
+        }
+
+        .description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .description>b {
+            color: aqua;
+        }
+
+        .loader {
+            width: 120px;
+            height: 20px;
+            -webkit-mask: linear-gradient(90deg, #000 70%, #0000 0) 0/20%;
+            background:
+                linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+            animation: l4 2s infinite steps(6);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes l4 {
+            100% {
+                background-size: 120%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>VIEW YOUR JOBS</h1>
+    </center>
+    <div class="loader" id="loader"></div>
+    <div class="continer" id="container"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
