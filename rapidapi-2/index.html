@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rapidapi-2</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            padding: 10px;
+            text-align: center;
+        }
+        .item {
+            padding: 10px;
+            border: 2px solid rgb(18, 156, 131);
+            margin: 10px;
+            background-color: lightblue
+        }
+        img {
+            max-width: 100%;
+            object-fit: contain;
+            image-rendering: crisp-edges;
+        }
+        img:hover {
+            width: 50%;
+            object-fit: cover;
+        }
+        /* Centered Loading Spinner */
+.loader {
+  border: 8px solid #f3f3f3;       /* Light grey */
+  border-top: 8px solid #3498db;   /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  
+  /* Centering the loader */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  z-index: 999;                    /* Ensure it's on top */
+  display: none;                    /* Hidden by default */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div id="container">
+            <div class="loader" id="loading"></div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
