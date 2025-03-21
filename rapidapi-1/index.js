@@ -65,6 +65,6 @@ async function saveData(url, status) {
 // Automatically fetch and display a new image every 10 seconds
 document.addEventListener("DOMContentLoaded", () => {
     randomDog();                     // Initial call
-    setInterval(randomDog, 7000);  // Fetch new image every 10 seconds
+    setInterval(randomDog, 10000);  // Fetch new image every 10 seconds
 });
 
